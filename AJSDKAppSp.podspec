@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-    s.name         = 'AJAppSpSDK'
+    s.name         = 'AJSDKAppSp'
     s.version      = '0.0.1'
     s.summary      = 'ios AJSDKAppSp versionUpdate Notice'
     s.homepage     = 'https://github.com/anji-plus/aj_ios_appsp'
