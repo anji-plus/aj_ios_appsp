@@ -1,6 +1,6 @@
 # iOS SDK集成
 ### 1.使用CocoaPods接入SDK
-* 使用CocoaPods引入 **AJAppSpSDK** 先进入项目Podfile文件进行配置
+* 使用CocoaPods引入 **AJSDKAppSp** 先进入项目Podfile文件进行配置
 
 ```
 platform :ios, '9.0'
@@ -8,7 +8,7 @@ use_frameworks!
 
 target '<Your Target Name>' do
     # 示例：0.0.1，可以选择指定发布版本
-    pod 'AJAppSpSDK', '~> 0.0.1' 
+    pod 'AJSDKAppSp', '~> 0.0.1' 
 end
 
 ```
@@ -29,7 +29,7 @@ $ pod install
 ```
 import UIKit
 //导入头文件
-import AJAppSpSdk
+import AJSDKAppSp
 
 class ViewController: UIViewController {
 
