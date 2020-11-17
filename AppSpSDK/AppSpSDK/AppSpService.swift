@@ -12,6 +12,31 @@ import UIKit
 public class AppSpService: NSObject {
     @objc public static let shareService = AppSpService()
     fileprivate var _appKey: String?
+    fileprivate let reachability = try! AJAppSpReachability()
+    var connectionStatus:String = "WIFI"
+    
+    deinit {
+        reachability.stopNotifier()
+    }
+    public override init() {
+        super.init();
+        
+        reachability.whenReachable = { [weak self] reachability in
+            if reachability.connection == .wifi {
+                self?.connectionStatus = "WIFI"
+            } else {
+                self?.connectionStatus = "4G"
+            }
+        }
+        reachability.whenUnreachable = { [weak self] _ in
+            self?.connectionStatus = ""
+        }
+
+        do {
+            try reachability.startNotifier()
+        } catch {
+        }
+    }
     
     //初始化使用服务
     @objc public func setAppkey(appKey: String) {

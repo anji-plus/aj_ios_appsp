@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C14DF38C256393B400BC330F /* AJAppSpReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14DF38B256393B400BC330F /* AJAppSpReachability.swift */; };
 		C191D98D25148611008EB56C /* AppSpSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = C191D98B25148611008EB56C /* AppSpSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C191D9B025148BBC008EB56C /* AppSpDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191D9A525148BBB008EB56C /* AppSpDeviceInfo.swift */; };
 		C191D9B125148BBC008EB56C /* AppSpVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191D9A725148BBB008EB56C /* AppSpVersion.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C14DF38B256393B400BC330F /* AJAppSpReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJAppSpReachability.swift; sourceTree = "<group>"; };
 		C191D98825148611008EB56C /* AppSpSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppSpSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C191D98B25148611008EB56C /* AppSpSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSpSDK.h; sourceTree = "<group>"; };
 		C191D98C25148611008EB56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		C191D9A925148BBB008EB56C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C14DF38B256393B400BC330F /* AJAppSpReachability.swift */,
 				C191D9AA25148BBB008EB56C /* AppSpConfigure.swift */,
 				C191D9AB25148BBB008EB56C /* AppSpUtils.swift */,
 				C191D9AC25148BBB008EB56C /* AppSpRequest.swift */,
@@ -193,6 +196,7 @@
 				C191D9B425148BBC008EB56C /* AppSpUtils.swift in Sources */,
 				C191D9B325148BBC008EB56C /* AppSpConfigure.swift in Sources */,
 				C191D9B225148BBC008EB56C /* AppSpService.swift in Sources */,
+				C14DF38C256393B400BC330F /* AJAppSpReachability.swift in Sources */,
 				C191D9B125148BBC008EB56C /* AppSpVersion.swift in Sources */,
 				C191D9B725148BBC008EB56C /* AppSpNotice.swift in Sources */,
 				C191D9B525148BBC008EB56C /* AppSpRequest.swift in Sources */,

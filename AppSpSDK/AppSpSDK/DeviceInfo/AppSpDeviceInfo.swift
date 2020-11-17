@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SystemConfiguration
 
 class AppSpDeviceInfo: NSObject {
     //初始化设备信息接口
@@ -22,8 +23,8 @@ class AppSpDeviceInfo: NSObject {
         return  [
            "brand": getBrandInfo(),
            "deviceId": getDeviceId(),
-           "sdkVersion": "0.0.2",
-           "netWorkStatus": "",
+           "sdkVersion": AppSpSDKVersion,
+            "netWorkStatus": AppSpService.shareService.connectionStatus,
            "osVersion": getOSVerison(),
            "platform": getPlatform(),
            "screenInfo": getScreenInfo(),
@@ -87,7 +88,7 @@ extension UIDevice {
         switch platform {
             
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":  return "iPhone 4"
-        case "iPhone4,1":                                return "iPhone 4s"
+        case "iPhone4,1":                             return "iPhone 4s"
         case "iPhone5,1", "iPhone5,2":                 return "iPhone 5"
         case "iPhone5,3", "iPhone5,4":                 return "iPhone 5c"
         case "iPhone6,1", "iPhone6,2":                 return "iPhone 5s"
@@ -105,8 +106,15 @@ extension UIDevice {
         case "iPhone10,3", "iPhone10,6":               return "iPhone X"
         case "iPhone11,2":                               return "iPhone XS "
         case "iPhone11,4", "iPhone11,6":               return "iPhone XS Max"
-        case "iPhone11,8":                               return "iPhone XR"
-            
+        case "iPhone11,8":                              return "iPhone XR"
+        case "iPhone12,1":                              return "iPhone 11"
+        case "iPhone12,3":                              return "iPhone 11 Pro"
+        case "iPhone12,5":                              return "iPhone 11 Pro Max"
+        case "iPhone13,1":                              return "iPhone 12 mini"
+        case "iPhone13,2":                              return "iPhone 12"
+        case "iPhone13,3":                              return "iPhone 12  Pro"
+        case "iPhone13,4":                              return "iPhone 12  Pro Max"
+
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
         case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
         case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
