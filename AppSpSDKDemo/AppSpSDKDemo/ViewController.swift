@@ -20,8 +20,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.title = "AppSp SDK Demo"
         //初始化AppSpService
-//        AppSpService.shareService.setAppkey(appKey: "64cf5a851f37c6c0ab7a3186a2377d5d")
-        AppSpService.shareService.setAppkey(appKey: "your App Key")
+        
+//        AppSpService.shareService.setAppkey(appKey: "your App Key")
+        /**
+         * AppSpService.shareService.initConfig 该接口SDK 0.0.3版本支持 增加如下功能
+         * appkey: 移动服务平台创建应用获取
+         * debug： 是否显示调试log 默认开启
+         * host: 配置自己的host 服务地址 默认nil
+         */
+        AppSpService.shareService.initConfig(appkey: "your App Key", debug: true)
+//        AppSpService.shareService.initConfig(appkey: <#T##String#>, debug: <#T##Bool#>, <#T##host: String?##String?#>)
         
         configureView()
         configureData()

@@ -15,6 +15,9 @@ public class AppSpService: NSObject {
     fileprivate let reachability = try! AJAppSpReachability()
     var connectionStatus:String = "WIFI"
     
+    private(set) var isDebug : Bool = true //是否显示log 默认
+    private(set) var appSpBaseURL = "https://appsp.anji-plus.com"
+    
     deinit {
         reachability.stopNotifier()
     }
@@ -38,10 +41,24 @@ public class AppSpService: NSObject {
         }
     }
     
-    //初始化使用服务
+    //初始化使用服务 后续会删除该方，建议使用如下 func initConfig() 该方法进行初始化
     @objc public func setAppkey(appKey: String) {
         _appKey = appKey
         deviceInit()
+    }
+    /**
+     * initConfig 该接口SDK 0.0.3版本支持 增加如下功能；
+     * appkey: 移动服务平台创建应用获取
+     * debug： 是否显示调试log 默认开启
+     * host: 配置自己的host 服务地址 默认nil
+     */
+    @objc public func initConfig(appkey: String, debug: Bool = true, _ host: String? = nil) {
+        isDebug = debug
+        if host != nil {
+            appSpBaseURL = host!
+        }
+        self.setAppkey(appKey: appkey)
+        
     }
     
     //获取appkey 用于请求接口

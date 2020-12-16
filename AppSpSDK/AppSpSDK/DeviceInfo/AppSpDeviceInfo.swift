@@ -13,9 +13,7 @@ class AppSpDeviceInfo: NSObject {
     //初始化设备信息接口
     class func deviceInit() {
         AppSpRequest.share.request(path: AppSpDeviceInitPath, success: { (repData) in
-            appSpLog(repData)
         }) { (errorData) in
-            appSpLog(errorData)
         }
     }
     //直接返回接口请求的基础参数字典

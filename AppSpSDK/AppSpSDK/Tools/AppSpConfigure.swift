@@ -6,16 +6,13 @@
 //  Copyright © 2020 Black. All rights reserved.
 //
 
-let AppSpSDKVersion = "0.0.2" //发布版本号
+let AppSpSDKVersion = "0.0.3" //发布版本号
 
-//let AppSpBaseURL = "http://appsp.dev.anji-plus.com"
-//let AppSpBaseURL = "http://appsp.test.anji-plus.com"
-let AppSpBaseURL = "https://appsp.anji-plus.com"
-// 获取公告
+// 获取公告路由
 let AppSpNoticePath = "/sp/phone/appNotice"
-// 获取版本更新
+// 获取版本更新路由
 let AppSpAppVersionPath = "/sp/phone/appVersion"
-// 设备初始化
+// 设备初始化路由
 let AppSpDeviceInitPath = "/sp/phone/deviceInit"
 
 

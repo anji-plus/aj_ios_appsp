@@ -35,7 +35,7 @@ class AppSpRequest: NSObject {
                  success: @escaping (_ response: [String : Any]) -> (),
                  failure: @escaping ((_ errorInfo: [String: Any]) -> ())) {
         
-        let reqUrlStr = AppSpBaseURL + path
+        let reqUrlStr = AppSpService.shareService.appSpBaseURL + path
         
         guard let reqUrl = URL(string: reqUrlStr) else {
             failure(self.apiErrorInfo(code: CustomErrorCode, messge: "URL解析异常"))
@@ -63,11 +63,16 @@ class AppSpRequest: NSObject {
         if oriEnStr != nil {
            params["sign"]! = AppSpRSACrypt.encrypt(oriEnStr!, AJ_RSA_PUBLIC_KEY_TAG) ?? ""
         }
+        appSpLog("========================================")
+        appSpLog("reqUrl: \(reqUrl)")
+        appSpLog("params: \(params)")
         
         request.httpBody = formateRequestBody(parmas: params)
             
         _apiSession.dataTask(with: request) { (data, response, error) in
             if (error != nil) {
+                appSpLog(error)
+                appSpLog("========================================")
                 if let err = error as NSError? {
                     failure(self.apiErrorInfo(code: "\(err.code)", messge: err.localizedDescription))
                 } else {
@@ -99,10 +104,11 @@ class AppSpRequest: NSObject {
                         failure(self.apiErrorInfo(code: repCode, messge: repMsg ?? "数据异常"))
                     }
                 }
-                
+                appSpLog("response: \(repDict)")
             } else {
                 failure(self.apiErrorInfo(code: CustomErrorCode, messge: "数据解析异常"))
             }
+            appSpLog("========================================")
         }.resume()
     }
     
