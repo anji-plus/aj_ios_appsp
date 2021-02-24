@@ -15,7 +15,7 @@ public class AppSpService: NSObject {
     fileprivate let reachability = try! AJAppSpReachability()
     var connectionStatus:String = "WIFI"
     
-    private(set) var isDebug : Bool = true //是否显示log 默认
+    private(set) var isDebug : Bool = true //是否显示log 默认1
     private(set) var appSpBaseURL = "https://appsp.anji-plus.com"
     
     deinit {
