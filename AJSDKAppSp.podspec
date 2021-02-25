@@ -9,5 +9,7 @@ Pod::Spec.new do |s|
     s.source       = {:git => 'https://github.com/anji-plus/aj_ios_appsp.git', :tag => s.version}
     s.requires_arc = true
     s.swift_version = '4.0'
+    s.static_framework = true
     s.source_files = 'AppSpSDK/AppSpSDK/**/*.swift'
+
 end
