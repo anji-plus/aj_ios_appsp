@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         self.title = "AppSp SDK Demo"
         //初始化AppSpService
         
+        // 开发环境host和测试app的key
+        let devAppKey = "1f272cb0375942b6a6b89a70eb23fc22"
+//        let devHost = "http://appsp.dev.anji-plus.com"
+        
 //        AppSpService.shareService.setAppkey(appKey: "your App Key")
         /**
          * AppSpService.shareService.initConfig 该接口SDK 0.0.3版本支持 增加如下功能
@@ -28,7 +32,7 @@ class ViewController: UIViewController {
          * debug： 是否显示调试log 默认开启
          * host: 配置自己的host 服务地址 默认nil
          */
-        AppSpService.shareService.initConfig(appkey: "your App Key", debug: true)
+        AppSpService.shareService.initConfig(appkey: devAppKey, debug: true)
 //        AppSpService.shareService.initConfig(appkey: <#T##String#>, debug: <#T##Bool#>, <#T##host: String?##String?#>)
         
         configureView()
