@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		426C401425EC7ED600FE9E57 /* AJSDKAppSpOc.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 426C401325EC7ED600FE9E57 /* AJSDKAppSpOc.podspec */; };
+		4216356725ECACD600C2DD5B /* AJSDKAppSpOc.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4216356625ECACD600C2DD5B /* AJSDKAppSpOc.podspec */; };
 		4280D7A225EC87FE00C25B77 /* AppSpConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4280D7A025EC87FE00C25B77 /* AppSpConfig.h */; };
 		4280D7A325EC87FE00C25B77 /* AppSpConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4280D7A125EC87FE00C25B77 /* AppSpConfig.m */; };
 		42F8904325E88F7B003DBDF9 /* AppSpOcSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 42F8904125E88F7B003DBDF9 /* AppSpOcSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		426C401325EC7ED600FE9E57 /* AJSDKAppSpOc.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AJSDKAppSpOc.podspec; path = ../../AJSDKAppSpOc.podspec; sourceTree = "<group>"; };
+		4216356625ECACD600C2DD5B /* AJSDKAppSpOc.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AJSDKAppSpOc.podspec; path = ../../../AJSDKAppSpOc.podspec; sourceTree = "<group>"; };
 		4280D7A025EC87FE00C25B77 /* AppSpConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSpConfig.h; sourceTree = "<group>"; };
 		4280D7A125EC87FE00C25B77 /* AppSpConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSpConfig.m; sourceTree = "<group>"; };
 		42F8903E25E88F7B003DBDF9 /* AppSpOcSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppSpOcSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +88,7 @@
 				42F8904225E88F7B003DBDF9 /* Info.plist */,
 				42F8905525E890DA003DBDF9 /* AppSpService.h */,
 				42F8905625E890DA003DBDF9 /* AppSpService.m */,
-				426C401325EC7ED600FE9E57 /* AJSDKAppSpOc.podspec */,
+				4216356625ECACD600C2DD5B /* AJSDKAppSpOc.podspec */,
 			);
 			path = AppSpOcSDK;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				426C401425EC7ED600FE9E57 /* AJSDKAppSpOc.podspec in Resources */,
+				4216356725ECACD600C2DD5B /* AJSDKAppSpOc.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
