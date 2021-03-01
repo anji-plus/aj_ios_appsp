@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name         = 'AJSDKAppSp'
-    s.version      = '0.0.3'
+    s.version      = '0.0.4'
     s.summary      = 'ios AJSDKAppSp versionUpdate Notice'
-    s.homepage     = 'https://github.com/anji-plus/aj_ios_appsp'
+    s.homepage     = 'https://github.com/anji-plus/aj_ios_appsp/Swift'
     s.license      = 'MIT'
     s.authors      = {'blackxu' => '747373635@qq.com'}
     s.platform     = :ios, '9.0'
